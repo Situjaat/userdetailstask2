@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-details-card-2</title>
+    <style>
+         #main_container{
+            /* border: 1px solid rgb(214, 45, 45); */
+            place-items: center;
+            display: grid;
+             grid-template-columns: repeat(4,1fr);
+             padding: 15px;
+        }
+        .card_container img {
+          width: 450px;
+          height: 450px;
+        }
+
+        .card_container button {
+         padding: 10px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 15px;
+        }
+        .card_container{
+            border: 2px solid gray;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media screen and (min-width:768px) and (max-width:1080px) {
+
+            #main_container{
+            /* border: 1px solid rgb(214, 45, 45); */
+            place-items: center;
+            display: grid;
+             grid-template-columns: repeat(2,1fr);
+             padding: 15px;
+        }
+        }
+
+        @media screen and (min-width:200px) and (max-width:767px) {
+
+#main_container{
+/* border: 1px solid rgb(214, 45, 45); */
+place-items: center;
+display: grid;
+ grid-template-columns: repeat(1,1fr);
+ padding: 15px;
+}
+}
+    </style>
+</head>
+<body>
+    <div id="main_container">
+
+    </div>
+</body>
+<script>
+  let arr = [
+        {
+          image: "https://wallpapers.com/images/hd/beautiful-nature-pictures-qjcss5r32ziry34t.jpg",
+          h3: "Kasmir Lake",
+          p: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?",
+        },
+        {
+          image:
+            "https://png.pngtree.com/thumb_back/fh260/background/20210526/pngtree-trees-and-wild-flowers-photo-300-dpi-image_721043.jpg",
+          h3: "Mera Khet",
+          p: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?",
+        },
+        {
+          image: "https://wallpapers.com/images/featured/green-nature-pictures-tgy6dtxhgtwubez9.jpg",
+          h3: "Mera Ghar",
+          p: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?",
+        },
+        {
+          image: "https://wallpapers.com/images/featured/hd-nature-background-ecuobentywdnmnz3.jpg",
+          h3: "Mera Garden",
+          p: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?",
+        },
+        {
+          image: "https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_640.jpg",
+          h3: "Meri Boat",
+          p: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?",
+        },
+        {
+          image: "https://m.media-amazon.com/images/I/71wUvJ+TzQL._AC_UF1000,1000_QL80_.jpg",
+          h3: "My House Way",
+          p: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?",
+        },
+        {
+          image: "https://thumbs.dreamstime.com/b/misty-mountains-wall-decor-print-poster-high-quality-dpi-misty-mountains-wall-decor-print-poster-wall-art-framed-print-263646194.jpg",
+          h3: "My Mountain Dew",
+          p: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?",
+        },
+        {
+          image: "https://img.artpal.com/165072/7-23-2-7-14-37-33m.jpg",
+          h3: "My Sunrise",
+          p: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ad vero?",
+        },
+      ];
+
+      let main_container = document.getElementById("main_container");
+      function getData() {
+        arr.forEach((user) => {
+          let div = document.createElement("div");
+          div.classList.add("card_container");
+          let img = document.createElement("img");
+          img.src = user.image;
+          let h3 = document.createElement("h3");
+          h3.innerText = user.h3;
+          let p = document.createElement("p");
+          p.innerText = user.p;
+          let btn = document.createElement("button");
+          btn.innerText = "View Map";
+          div.append(img, h3, p, btn);
+          main_container.append(div);
+        });
+      }
+
+      getData();
+    </script>
+  </body>
+</script>
+</html>
